@@ -1,0 +1,17 @@
+<div>
+  <div>
+    Name:<span class="user-details-text">{{ selectedUser()?.name }}</span>
+  </div>
+  <div class="user-details">
+    <span>Details:</span>
+    @if (selectSelectedUserDetailsLoading()) {
+      <span class="loader">Load user details... <span class="spinner"></span></span>
+    } @else {
+      @if (selectSelectedUserDetails()) {
+        <span class="user-details-text">{{ selectSelectedUserDetails() }}</span>
+      } @else {
+        <span class="user-details-text">User details not found...</span>
+      }
+    }
+  </div>
+</div>

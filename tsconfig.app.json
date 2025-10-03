@@ -4,7 +4,13 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@models/*": ["src/app/models/*"],
+      "@services/*": ["src/app/services/*"],
+      "@store/*": ["src/app/store/*"],
+      "@env/*": ["src/environments/*"]
+    }
   },
   "include": [
     "src/**/*.ts"

@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+.spinner {
+  display: flex;
+  background-image: url('./icons/loader.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 1em;
+  min-width: 1em;
+  vertical-align: text-bottom;
+  animation: spin 1s linear infinite;
+}
+.loader {
+  padding: 0 4px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

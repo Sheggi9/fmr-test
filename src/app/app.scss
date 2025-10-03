@@ -1,0 +1,34 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .users-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    &-list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      &-item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.btn {
+  &.selected {
+    background-color: #0000001a;
+  }
+}
