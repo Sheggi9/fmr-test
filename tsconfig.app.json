@@ -6,10 +6,10 @@
     "outDir": "./out-tsc/app",
     "types": [],
     "paths": {
-      "@models/*": ["src/app/models/*"],
-      "@services/*": ["src/app/services/*"],
-      "@store/*": ["src/app/store/*"],
-      "@env/*": ["src/environments/*"]
+      "@models/*": ["./src/app/models/*"],
+      "@services/*": ["./src/app/services/*"],
+      "@store/*": ["./src/app/store/*"],
+      "@env/*": ["./src/environments/*"]
     }
   },
   "include": [
