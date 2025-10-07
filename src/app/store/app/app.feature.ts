@@ -100,6 +100,10 @@ export const appFeature = createFeature({
       ...state,
       orders: { ...state.orders, loading: true },
     })),
+    on(OrdersApiActions.loadOrdersSuccess, (state, {orders}) => ({
+      ...state,
+      orders: ordersAdapter.setAll(orders, state.orders),
+    })),
     on(OrdersApiActions.loadOrdersEnd, (state) => ({
       ...state,
       orders: { ...state.orders, loading: false },
