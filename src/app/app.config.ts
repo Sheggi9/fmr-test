@@ -22,9 +22,9 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
-    environment.providers,
     provideStore(),
     provideEffects(appApiEffect),
     provideState(appFeature),
+    ...environment.providers,
   ],
 };
